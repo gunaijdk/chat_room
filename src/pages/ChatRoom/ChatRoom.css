@@ -1,0 +1,219 @@
+/* 重置样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* 聊天室容器 */
+.chat-room {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 侧边栏 */
+.sidebar {
+  flex: 0 0 250px; 
+  background-color: #aabff6;
+  padding: 20px; /* 侧边栏内边距 */
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px; /* 侧边栏头部高度 */
+  background-color: #c3e4ff;
+  padding: 0 10px;
+}
+
+.message-prompt {
+  font-size: 16px;
+  color: #333;
+}
+
+.new-room-btn {
+  width: 40px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.room-list {
+  list-style: none;
+  margin-top: 30px; /* 房间列表与头部的间距 */
+}
+
+.room-entry {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-bottom: 15px; /* 房间项之间的间距 */
+}
+
+.room-entry:hover {
+  background-color: #e0e0e0; /* 鼠标悬停效果 */
+}
+
+.room-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.room-info {
+  flex-grow: 1;
+}
+
+.room-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.last-chat-time {
+  font-size: 0.8em;
+  color: #666;
+}
+
+/* 聊天窗口 */
+.chat-window {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.message-list {
+  margin-top: 20px;
+}
+
+.message-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.message-info {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sender-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.message-content {
+  margin-bottom: 5px;
+}
+
+.message-time {
+  font-size: 0.8em;
+  color: #666;
+}
+/* 聊天输入区域的基础样式 */
+.chat-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-top: 1px solid #e0e0e0; /* 与上部分的分隔线 */
+  margin-bottom: 10px;
+}
+
+/* 输入框样式 */
+.chat-input input {
+  flex-grow: 1; /* 输入框占据剩余空间 */
+  padding: 8px 15px; /* 内边距 */
+  border: 1px solid #ccc; /* 边框 */
+  border-radius: 4px; /* 边框圆角 */
+  margin-right: 10px; /* 与发送按钮的间距 */
+
+  outline: none; /* 点击时无轮廓 */
+}
+
+/* 发送按钮样式 */
+.chat-input button {
+  padding: 8px 20px; /* 内边距 */
+  border: none; /* 无边框 */
+  border-radius: 4px; /* 边框圆角 */
+  background-color: #007bff; /* 按钮背景色 */
+  color: white; /* 字体颜色 */
+  cursor: pointer; /* 鼠标悬停时显示手型图标 */
+  transition: background-color 0.3s; /* 背景色变化的过渡效果 */
+}
+
+.chat-input button:hover {
+  background-color: #0056b3; /* 鼠标悬停时的背景色 */
+}
+.new-room-input {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  /* 可以添加其他样式，如边框、内边距等 */
+}
+
+.new-room-input input {
+  flex-grow: 1;
+  padding: 8px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.new-room-input button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-room-input button:hover {
+  background-color: #0056b3;
+}
+/* ChatRoom.css */
+
+.delete-room-btn {
+  margin-left: 10px; /* 与房间信息保持一定间距 */
+  background-color: #dc3545; /* 红色背景 */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-room-btn:hover {
+  background-color: #c82333; /* 鼠标悬停时的颜色 */
+}
